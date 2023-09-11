@@ -6,7 +6,7 @@ function createCanvas (n){
     them in the .container.
     */
     let container = document.querySelector(".container");
-    let dimensions = (80 / n);
+    let dimensions = (60 / n);
     for (let i = 0; i < n; i++) {
         let subcontainer = document.createElement('div');
         subcontainer.setAttribute('class', 'row')
