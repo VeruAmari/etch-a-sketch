@@ -37,6 +37,10 @@ function activateDrawing () {
 };
 
 function deleteCurrentCanvas() {
+    /*
+    Remove each row from container to make space
+    for new canvas
+    */
     let container = document.querySelector(".container");
     let rows = document.querySelectorAll(".row");
     rows.forEach((row)=>{
@@ -45,8 +49,9 @@ function deleteCurrentCanvas() {
 };
 
 function newCanvas() {
+    let canvasSize = Number(prompt('Type a number for canvas size (Min 1, Max 100)'));
+    if ((!canvasSize) || canvasSize > 100){return};
     deleteCurrentCanvas();
-    let canvasSize = Number(prompt('Type a number for canvas size'));
     createCanvas(canvasSize);
     activateDrawing();
 };
@@ -57,4 +62,3 @@ activateDrawing();
 
 let restart = document.querySelector('.restart');
 restart.addEventListener('click', () => newCanvas());
-
