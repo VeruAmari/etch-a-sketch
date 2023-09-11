@@ -6,7 +6,7 @@ function createCanvas (n){
     them in the .container.
     */
     let container = document.querySelector(".container");
-
+    let dimensions = (80 / n);
     for (let i = 0; i < n; i++) {
         let subcontainer = document.createElement('div');
         subcontainer.setAttribute('class', 'row')
@@ -14,9 +14,10 @@ function createCanvas (n){
         for (let j = 0; j < n; j++) {
             let div = document.createElement('div');
             div.setAttribute('class', 'square')
+            div.setAttribute('style', `min-width: ${dimensions}vmin; min-height: ${dimensions}vmin;`)
             subcontainer.appendChild(div);
         }
-
+        //subcontainer.setAttribute('style', `max-width: ${dimensions}dvh; max-height: ${dimensions}dvh;`)
         container.appendChild(subcontainer);
     }
 };
@@ -35,5 +36,5 @@ function activateDrawing () {
     });
 };
 
-createCanvas(50);
+createCanvas(16);
 activateDrawing();

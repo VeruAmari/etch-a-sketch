@@ -3,23 +3,28 @@
     padding: 0px;
 }
 
-.container,
-.row {
-    display: flex;
-}
-
-.container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body{
     min-width: 100vw;
     min-height: 100vh;
 }
 
+.container,
+.row,
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.row {
+    max-height: fit-content;
+}
+.container {
+    flex-direction: column;
+}
+
 .square {
-    border: 1px solid gainsboro;
-    min-width: 15px;
-    min-height: 15px;
+    background-color: gainsboro;
 }
 .active {
     background: black;
