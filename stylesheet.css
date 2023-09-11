@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container,
+.row {
+    display: flex;
+}
+
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.square {
+    border: 1px solid gainsboro;
+    min-width: 15px;
+    min-height: 15px;
+}
+.active {
+    background: black;
+}
