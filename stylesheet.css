@@ -4,8 +4,10 @@
 }
 
 body{
+    flex-direction: column;
     min-width: 100vw;
     min-height: 100vh;
+    background-color: aquamarine;
 }
 
 .container,
@@ -14,7 +16,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
 }
 .row {
     max-height: fit-content;
@@ -24,8 +25,13 @@ body{
 }
 
 .square {
-    background-color: gainsboro;
+    background-color: ghostwhite;
 }
 .active {
     background: black;
+}
+
+button {
+    padding: 15px;
+    border: 0;
 }

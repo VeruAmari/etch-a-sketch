@@ -36,5 +36,25 @@ function activateDrawing () {
     });
 };
 
+function deleteCurrentCanvas() {
+    let container = document.querySelector(".container");
+    let rows = document.querySelectorAll(".row");
+    rows.forEach((row)=>{
+        container.removeChild(row);
+    })
+};
+
+function newCanvas() {
+    deleteCurrentCanvas();
+    let canvasSize = Number(prompt('Type a number for canvas size'));
+    createCanvas(canvasSize);
+    activateDrawing();
+};
+
+
 createCanvas(16);
 activateDrawing();
+
+let restart = document.querySelector('.restart');
+restart.addEventListener('click', () => newCanvas());
+
